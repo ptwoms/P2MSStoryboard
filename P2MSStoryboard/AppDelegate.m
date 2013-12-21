@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "P2MSExampleObjectAnimationViewController.h"
 
 @implementation AppDelegate
 
@@ -15,6 +16,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    P2MSExampleObjectAnimationViewController *vc = [[P2MSExampleObjectAnimationViewController alloc]initWithNibName:nil bundle:nil];
+    self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
     return YES;
 }

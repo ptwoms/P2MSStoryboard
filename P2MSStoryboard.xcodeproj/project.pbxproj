@@ -19,6 +19,28 @@
 		C8206FD01864A50500FFDAA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8206FB81864A50500FFDAA9 /* UIKit.framework */; };
 		C8206FD81864A50500FFDAA9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C8206FD61864A50500FFDAA9 /* InfoPlist.strings */; };
 		C8206FDA1864A50500FFDAA9 /* P2MSStoryboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8206FD91864A50500FFDAA9 /* P2MSStoryboardTests.m */; };
+		C8206FE61864B62800FFDAA9 /* P2MSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C8206FE51864B62800FFDAA9 /* P2MSObject.m */; };
+		C8206FE91864B77500FFDAA9 /* P2MSObjectWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = C8206FE81864B77500FFDAA9 /* P2MSObjectWrapper.m */; };
+		C8206FEF18651D7400FFDAA9 /* P2MSExampleObjectAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8206FEE18651D7400FFDAA9 /* P2MSExampleObjectAnimationViewController.m */; };
+		C8206FFE18653C9100FFDAA9 /* pluto_1.png in Resources */ = {isa = PBXBuildFile; fileRef = C8206FF218653C9100FFDAA9 /* pluto_1.png */; };
+		C8206FFF18653C9100FFDAA9 /* pluto_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C8206FF318653C9100FFDAA9 /* pluto_2.png */; };
+		C820700018653C9100FFDAA9 /* pluto_2_1.png in Resources */ = {isa = PBXBuildFile; fileRef = C8206FF418653C9100FFDAA9 /* pluto_2_1.png */; };
+		C820700118653C9100FFDAA9 /* pluto_2_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C8206FF518653C9100FFDAA9 /* pluto_2_2.png */; };
+		C820700218653C9100FFDAA9 /* pluto_2_3.png in Resources */ = {isa = PBXBuildFile; fileRef = C8206FF618653C9100FFDAA9 /* pluto_2_3.png */; };
+		C820700318653C9100FFDAA9 /* pluto_3.png in Resources */ = {isa = PBXBuildFile; fileRef = C8206FF718653C9100FFDAA9 /* pluto_3.png */; };
+		C820700418653C9100FFDAA9 /* pluto_4.png in Resources */ = {isa = PBXBuildFile; fileRef = C8206FF818653C9100FFDAA9 /* pluto_4.png */; };
+		C820700518653C9100FFDAA9 /* pluto_5.png in Resources */ = {isa = PBXBuildFile; fileRef = C8206FF918653C9100FFDAA9 /* pluto_5.png */; };
+		C820700618653C9100FFDAA9 /* pluto_6.png in Resources */ = {isa = PBXBuildFile; fileRef = C8206FFA18653C9100FFDAA9 /* pluto_6.png */; };
+		C820700718653C9100FFDAA9 /* pluto_7.png in Resources */ = {isa = PBXBuildFile; fileRef = C8206FFB18653C9100FFDAA9 /* pluto_7.png */; };
+		C820700818653C9100FFDAA9 /* pluto_8.png in Resources */ = {isa = PBXBuildFile; fileRef = C8206FFC18653C9100FFDAA9 /* pluto_8.png */; };
+		C820700918653C9100FFDAA9 /* pluto_sit.png in Resources */ = {isa = PBXBuildFile; fileRef = C8206FFD18653C9100FFDAA9 /* pluto_sit.png */; };
+		C820701018658B3E00FFDAA9 /* hour.png in Resources */ = {isa = PBXBuildFile; fileRef = C820700D18658B3E00FFDAA9 /* hour.png */; };
+		C820701118658B3E00FFDAA9 /* minute.png in Resources */ = {isa = PBXBuildFile; fileRef = C820700E18658B3E00FFDAA9 /* minute.png */; };
+		C820701218658B3E00FFDAA9 /* clock_base.png in Resources */ = {isa = PBXBuildFile; fileRef = C820700F18658B3E00FFDAA9 /* clock_base.png */; };
+		C82070181865F35B00FFDAA9 /* fish.png in Resources */ = {isa = PBXBuildFile; fileRef = C82070141865F35B00FFDAA9 /* fish.png */; };
+		C82070191865F35B00FFDAA9 /* fish_1.png in Resources */ = {isa = PBXBuildFile; fileRef = C82070151865F35B00FFDAA9 /* fish_1.png */; };
+		C820701A1865F35B00FFDAA9 /* fish_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C82070161865F35B00FFDAA9 /* fish_2.png */; };
+		C820701B1865F35B00FFDAA9 /* fish_3.png in Resources */ = {isa = PBXBuildFile; fileRef = C82070171865F35B00FFDAA9 /* fish_3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +70,31 @@
 		C8206FD51864A50500FFDAA9 /* P2MSStoryboardTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "P2MSStoryboardTests-Info.plist"; sourceTree = "<group>"; };
 		C8206FD71864A50500FFDAA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C8206FD91864A50500FFDAA9 /* P2MSStoryboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = P2MSStoryboardTests.m; sourceTree = "<group>"; };
+		C8206FE41864B62800FFDAA9 /* P2MSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = P2MSObject.h; sourceTree = "<group>"; };
+		C8206FE51864B62800FFDAA9 /* P2MSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P2MSObject.m; sourceTree = "<group>"; };
+		C8206FE71864B77500FFDAA9 /* P2MSObjectWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = P2MSObjectWrapper.h; sourceTree = "<group>"; };
+		C8206FE81864B77500FFDAA9 /* P2MSObjectWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P2MSObjectWrapper.m; sourceTree = "<group>"; };
+		C8206FED18651D7400FFDAA9 /* P2MSExampleObjectAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = P2MSExampleObjectAnimationViewController.h; sourceTree = "<group>"; };
+		C8206FEE18651D7400FFDAA9 /* P2MSExampleObjectAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P2MSExampleObjectAnimationViewController.m; sourceTree = "<group>"; };
+		C8206FF218653C9100FFDAA9 /* pluto_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pluto_1.png; sourceTree = "<group>"; };
+		C8206FF318653C9100FFDAA9 /* pluto_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pluto_2.png; sourceTree = "<group>"; };
+		C8206FF418653C9100FFDAA9 /* pluto_2_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pluto_2_1.png; sourceTree = "<group>"; };
+		C8206FF518653C9100FFDAA9 /* pluto_2_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pluto_2_2.png; sourceTree = "<group>"; };
+		C8206FF618653C9100FFDAA9 /* pluto_2_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pluto_2_3.png; sourceTree = "<group>"; };
+		C8206FF718653C9100FFDAA9 /* pluto_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pluto_3.png; sourceTree = "<group>"; };
+		C8206FF818653C9100FFDAA9 /* pluto_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pluto_4.png; sourceTree = "<group>"; };
+		C8206FF918653C9100FFDAA9 /* pluto_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pluto_5.png; sourceTree = "<group>"; };
+		C8206FFA18653C9100FFDAA9 /* pluto_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pluto_6.png; sourceTree = "<group>"; };
+		C8206FFB18653C9100FFDAA9 /* pluto_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pluto_7.png; sourceTree = "<group>"; };
+		C8206FFC18653C9100FFDAA9 /* pluto_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pluto_8.png; sourceTree = "<group>"; };
+		C8206FFD18653C9100FFDAA9 /* pluto_sit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pluto_sit.png; sourceTree = "<group>"; };
+		C820700D18658B3E00FFDAA9 /* hour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hour.png; sourceTree = "<group>"; };
+		C820700E18658B3E00FFDAA9 /* minute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minute.png; sourceTree = "<group>"; };
+		C820700F18658B3E00FFDAA9 /* clock_base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock_base.png; sourceTree = "<group>"; };
+		C82070141865F35B00FFDAA9 /* fish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish.png; sourceTree = "<group>"; };
+		C82070151865F35B00FFDAA9 /* fish_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish_1.png; sourceTree = "<group>"; };
+		C82070161865F35B00FFDAA9 /* fish_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish_2.png; sourceTree = "<group>"; };
+		C82070171865F35B00FFDAA9 /* fish_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish_3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +124,10 @@
 		C8206FA81864A50500FFDAA9 = {
 			isa = PBXGroup;
 			children = (
+				C8206FE31864A9D900FFDAA9 /* classes */,
+				C8206FF018653C9100FFDAA9 /* images */,
+				C8206FED18651D7400FFDAA9 /* P2MSExampleObjectAnimationViewController.h */,
+				C8206FEE18651D7400FFDAA9 /* P2MSExampleObjectAnimationViewController.m */,
 				C8206FBA1864A50500FFDAA9 /* P2MSStoryboard */,
 				C8206FD31864A50500FFDAA9 /* P2MSStoryboardTests */,
 				C8206FB31864A50500FFDAA9 /* Frameworks */,
@@ -142,6 +193,59 @@
 				C8206FD61864A50500FFDAA9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C8206FE31864A9D900FFDAA9 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				C8206FE41864B62800FFDAA9 /* P2MSObject.h */,
+				C8206FE51864B62800FFDAA9 /* P2MSObject.m */,
+				C8206FE71864B77500FFDAA9 /* P2MSObjectWrapper.h */,
+				C8206FE81864B77500FFDAA9 /* P2MSObjectWrapper.m */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		C8206FF018653C9100FFDAA9 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				C82070131865F35B00FFDAA9 /* fish */,
+				C820700D18658B3E00FFDAA9 /* hour.png */,
+				C820700E18658B3E00FFDAA9 /* minute.png */,
+				C820700F18658B3E00FFDAA9 /* clock_base.png */,
+				C8206FF118653C9100FFDAA9 /* Pluto */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		C8206FF118653C9100FFDAA9 /* Pluto */ = {
+			isa = PBXGroup;
+			children = (
+				C8206FF218653C9100FFDAA9 /* pluto_1.png */,
+				C8206FF318653C9100FFDAA9 /* pluto_2.png */,
+				C8206FF418653C9100FFDAA9 /* pluto_2_1.png */,
+				C8206FF518653C9100FFDAA9 /* pluto_2_2.png */,
+				C8206FF618653C9100FFDAA9 /* pluto_2_3.png */,
+				C8206FF718653C9100FFDAA9 /* pluto_3.png */,
+				C8206FF818653C9100FFDAA9 /* pluto_4.png */,
+				C8206FF918653C9100FFDAA9 /* pluto_5.png */,
+				C8206FFA18653C9100FFDAA9 /* pluto_6.png */,
+				C8206FFB18653C9100FFDAA9 /* pluto_7.png */,
+				C8206FFC18653C9100FFDAA9 /* pluto_8.png */,
+				C8206FFD18653C9100FFDAA9 /* pluto_sit.png */,
+			);
+			path = Pluto;
+			sourceTree = "<group>";
+		};
+		C82070131865F35B00FFDAA9 /* fish */ = {
+			isa = PBXGroup;
+			children = (
+				C82070141865F35B00FFDAA9 /* fish.png */,
+				C82070151865F35B00FFDAA9 /* fish_1.png */,
+				C82070161865F35B00FFDAA9 /* fish_2.png */,
+				C82070171865F35B00FFDAA9 /* fish_3.png */,
+			);
+			path = fish;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +323,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C820700718653C9100FFDAA9 /* pluto_7.png in Resources */,
+				C820700618653C9100FFDAA9 /* pluto_6.png in Resources */,
+				C820700418653C9100FFDAA9 /* pluto_4.png in Resources */,
+				C820701B1865F35B00FFDAA9 /* fish_3.png in Resources */,
+				C820700118653C9100FFDAA9 /* pluto_2_2.png in Resources */,
+				C820700818653C9100FFDAA9 /* pluto_8.png in Resources */,
+				C8206FFE18653C9100FFDAA9 /* pluto_1.png in Resources */,
+				C820701018658B3E00FFDAA9 /* hour.png in Resources */,
+				C820700218653C9100FFDAA9 /* pluto_2_3.png in Resources */,
 				C8206FBF1864A50500FFDAA9 /* InfoPlist.strings in Resources */,
+				C820701118658B3E00FFDAA9 /* minute.png in Resources */,
+				C820700318653C9100FFDAA9 /* pluto_3.png in Resources */,
+				C82070181865F35B00FFDAA9 /* fish.png in Resources */,
+				C820700918653C9100FFDAA9 /* pluto_sit.png in Resources */,
 				C8206FC71864A50500FFDAA9 /* Images.xcassets in Resources */,
+				C820701218658B3E00FFDAA9 /* clock_base.png in Resources */,
+				C8206FFF18653C9100FFDAA9 /* pluto_2.png in Resources */,
+				C820701A1865F35B00FFDAA9 /* fish_2.png in Resources */,
+				C820700518653C9100FFDAA9 /* pluto_5.png in Resources */,
+				C82070191865F35B00FFDAA9 /* fish_1.png in Resources */,
+				C820700018653C9100FFDAA9 /* pluto_2_1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +362,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8206FE91864B77500FFDAA9 /* P2MSObjectWrapper.m in Sources */,
+				C8206FEF18651D7400FFDAA9 /* P2MSExampleObjectAnimationViewController.m in Sources */,
 				C8206FC51864A50500FFDAA9 /* AppDelegate.m in Sources */,
+				C8206FE61864B62800FFDAA9 /* P2MSObject.m in Sources */,
 				C8206FC11864A50500FFDAA9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
