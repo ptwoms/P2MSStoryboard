@@ -147,6 +147,24 @@ You can create
 	reset_transform:delay_time,animation_duration(always zero)
 	- eg: reset_transform:1,0
 
+####Example
+	P2MSObject *object = [[P2MSObject alloc]init];
+    [object loadObject:@"default pluto_1.png##pluto_2.png##pluto_3.png##pluto_4.png##pluto_5.png##pluto_6.png##pluto_7.png##pluto_8.png 95,49 10%,50% 1,1,0 move:0.1,7,70%,50%|animate:0,0,pluto_2_1##pluto_2_2##pluto_2_3,1,0,75%,,," inView:self.view withTag:1];
+    
+    P2MSObject *clockBase = [[P2MSObject alloc]init];
+    [clockBase loadObject:@"default clock_base.png 109,109 100,20 0 alpha:1,0.5,1.0" inView:self.view withTag:2];
+    
+    P2MSObject *hour = [[P2MSObject alloc]init];
+    [hour loadObject:@"default hour.png 4,76 153,37 0,0,0 alpha:1,0.5,1.0|clock_rotate:0,120,0" inView:self.view withTag:3];
+    
+    P2MSObject *minute = [[P2MSObject alloc]init];
+    [minute loadObject:@"default minute.png 3,93 153,28 0,0,0 alpha:1,0.5,1.0|clock_rotate:0,10,0" inView:self.view withTag:4];
+    
+    P2MSObject *fishObj = [[P2MSObject alloc]init];
+    [fishObj loadObject:@"default fish_3.png##fish_2.png##fish_1.png 59,52 10%,170 1,1,0 move:1,7,80%,175|replace:0,0,fish.png|flip_rotate:1,0,-1,1,-30|move:0,10,5%,100|reset_transform:0.1,0" inView:self.view withTag:5];
+
+<br/>
+![Animation.gif](SimpleAnimation.gif)
 
 ###Credits
 Sprite Images - <a href="https://archive.org/details/ug-sprite-sheet-collection-v2">Link</a>
