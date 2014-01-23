@@ -5,6 +5,8 @@ This libray is not meant for creating game. It provides a quick and easy way for
 
 It works on IOS 4.3+
 
+***In Progress --> P2MSAnimationObject***
+
 ###Usage For P2MSObject
     P2MSObject *object = [[P2MSObject alloc]init];
     object loadObject:@"Animation String" inView:canvasView withTag:imgTag];

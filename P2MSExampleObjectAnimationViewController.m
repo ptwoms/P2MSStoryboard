@@ -10,7 +10,7 @@
 #import "P2MSObject.h"
 
 @interface P2MSExampleObjectAnimationViewController (){
-//    P2MSObject *object;
+    P2MSAnimationObject *fishObj;
 }
 
 @end
@@ -48,9 +48,20 @@
     P2MSObject *minute = [[P2MSObject alloc]init];
     [minute loadObject:@"default minute.png 3,93 153,28 0,0,0 alpha:1,0.5,1.0|clock_rotate:0,10,0" inView:self.view withTag:4];
     
-    P2MSObject *fishObj = [[P2MSObject alloc]init];
-    [fishObj loadObject:@"default fish_3.png##fish_2.png##fish_1.png 59,52 10%,170 1,1,0 move:1,7,80%,175|replace:0,0,fish.png|flip_rotate:1,0,-1,1,-30|move:0,10,5%,100|reset_transform:0.1,0" inView:self.view withTag:5];
-    
+    //the references (performP2MSSelector & P2MSObjectBehavior) made in the P2MSAnimationObject are weak and it is required to retain the object until all the animation is done
+    fishObj = [[P2MSAnimationObject alloc]init];
+    P2MSAnimation *anim = [P2MSAnimation animationString:@"move:1,7,80%,175|move:0,10,5%,100" repeatCount:2];
+    P2MSAnimation *anim1 = [P2MSAnimation animationString:@"move:1,7,80%,175|move:0,10,5%,100" repeatCount:2];
+    P2MSAnimation *parent = [P2MSAnimation animationWithChildAnimations:[NSArray arrayWithObjects:anim, anim1, nil] repeatCount:1];
+    [fishObj loadObject:parent inView:self.view withTag:5 rect:CGRectMake(20, 170, 59, 52) initParams:@"fish_3.png##fish_2.png##fish_1.png 1 1,0"];
+    fishObj.deleage = self;
+    [fishObj startAnimation];
+//    [fishObj loadObject:@"default fish_3.png##fish_2.png##fish_1.png 59,52 10%,170 1,1,0 move:1,7,80%,175|replace:0,0,fish.png|flip_rotate:1,0,-1,1,-30|move:0,10,5%,100|reset_transform:0.1,0" inView:self.view withTag:5];
+
+}
+
+- (void)animationDone:(P2MSAnimationObject *)animatedObject{
+    fishObj = nil;
 }
 
 

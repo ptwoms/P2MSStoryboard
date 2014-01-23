@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "P2MSAnimationObject.h"
 
-@interface P2MSExampleObjectAnimationViewController : UIViewController
+@interface P2MSExampleObjectAnimationViewController : UIViewController<P2MSAnimationObjectDelegate>
 
 @end

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C81A6F7A188826CB00253C5A /* NSObject+P2MSPerformSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = C81A6F79188826CB00253C5A /* NSObject+P2MSPerformSelector.m */; };
+		C81A6F7D1888275B00253C5A /* UIView+P2MSUIViewAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C81A6F7C1888275B00253C5A /* UIView+P2MSUIViewAnimation.m */; };
+		C81A6F801888286F00253C5A /* P2MSAnimationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C81A6F7F1888286F00253C5A /* P2MSAnimationObject.m */; };
+		C81A6F831888291B00253C5A /* P2MSStandarBehaviors.m in Sources */ = {isa = PBXBuildFile; fileRef = C81A6F821888291B00253C5A /* P2MSStandarBehaviors.m */; };
+		C81A6F861888386200253C5A /* P2MSObjectAnimationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C81A6F851888386200253C5A /* P2MSObjectAnimationFactory.m */; };
 		C8206FB51864A50500FFDAA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8206FB41864A50500FFDAA9 /* Foundation.framework */; };
 		C8206FB71864A50500FFDAA9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8206FB61864A50500FFDAA9 /* CoreGraphics.framework */; };
 		C8206FB91864A50500FFDAA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8206FB81864A50500FFDAA9 /* UIKit.framework */; };
@@ -54,6 +59,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C81A6F771888216C00253C5A /* P2MSObjectBehavior.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = P2MSObjectBehavior.h; sourceTree = "<group>"; };
+		C81A6F78188826CB00253C5A /* NSObject+P2MSPerformSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+P2MSPerformSelector.h"; sourceTree = "<group>"; };
+		C81A6F79188826CB00253C5A /* NSObject+P2MSPerformSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+P2MSPerformSelector.m"; sourceTree = "<group>"; };
+		C81A6F7B1888275B00253C5A /* UIView+P2MSUIViewAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+P2MSUIViewAnimation.h"; sourceTree = "<group>"; };
+		C81A6F7C1888275B00253C5A /* UIView+P2MSUIViewAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+P2MSUIViewAnimation.m"; sourceTree = "<group>"; };
+		C81A6F7E1888286F00253C5A /* P2MSAnimationObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = P2MSAnimationObject.h; sourceTree = "<group>"; };
+		C81A6F7F1888286F00253C5A /* P2MSAnimationObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P2MSAnimationObject.m; sourceTree = "<group>"; };
+		C81A6F811888291B00253C5A /* P2MSStandarBehaviors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = P2MSStandarBehaviors.h; sourceTree = "<group>"; };
+		C81A6F821888291B00253C5A /* P2MSStandarBehaviors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P2MSStandarBehaviors.m; sourceTree = "<group>"; };
+		C81A6F841888386200253C5A /* P2MSObjectAnimationFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = P2MSObjectAnimationFactory.h; sourceTree = "<group>"; };
+		C81A6F851888386200253C5A /* P2MSObjectAnimationFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P2MSObjectAnimationFactory.m; sourceTree = "<group>"; };
 		C8206FB11864A50500FFDAA9 /* P2MSStoryboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = P2MSStoryboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8206FB41864A50500FFDAA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C8206FB61864A50500FFDAA9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -202,6 +218,17 @@
 				C8206FE51864B62800FFDAA9 /* P2MSObject.m */,
 				C8206FE71864B77500FFDAA9 /* P2MSObjectWrapper.h */,
 				C8206FE81864B77500FFDAA9 /* P2MSObjectWrapper.m */,
+				C81A6F771888216C00253C5A /* P2MSObjectBehavior.h */,
+				C81A6F78188826CB00253C5A /* NSObject+P2MSPerformSelector.h */,
+				C81A6F79188826CB00253C5A /* NSObject+P2MSPerformSelector.m */,
+				C81A6F7B1888275B00253C5A /* UIView+P2MSUIViewAnimation.h */,
+				C81A6F7C1888275B00253C5A /* UIView+P2MSUIViewAnimation.m */,
+				C81A6F7E1888286F00253C5A /* P2MSAnimationObject.h */,
+				C81A6F7F1888286F00253C5A /* P2MSAnimationObject.m */,
+				C81A6F811888291B00253C5A /* P2MSStandarBehaviors.h */,
+				C81A6F821888291B00253C5A /* P2MSStandarBehaviors.m */,
+				C81A6F841888386200253C5A /* P2MSObjectAnimationFactory.h */,
+				C81A6F851888386200253C5A /* P2MSObjectAnimationFactory.m */,
 			);
 			path = classes;
 			sourceTree = "<group>";
@@ -363,8 +390,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8206FE91864B77500FFDAA9 /* P2MSObjectWrapper.m in Sources */,
+				C81A6F831888291B00253C5A /* P2MSStandarBehaviors.m in Sources */,
+				C81A6F801888286F00253C5A /* P2MSAnimationObject.m in Sources */,
 				C8206FEF18651D7400FFDAA9 /* P2MSExampleObjectAnimationViewController.m in Sources */,
+				C81A6F861888386200253C5A /* P2MSObjectAnimationFactory.m in Sources */,
+				C81A6F7A188826CB00253C5A /* NSObject+P2MSPerformSelector.m in Sources */,
 				C8206FC51864A50500FFDAA9 /* AppDelegate.m in Sources */,
+				C81A6F7D1888275B00253C5A /* UIView+P2MSUIViewAnimation.m in Sources */,
 				C8206FE61864B62800FFDAA9 /* P2MSObject.m in Sources */,
 				C8206FC11864A50500FFDAA9 /* main.m in Sources */,
 			);
@@ -569,6 +601,7 @@
 				C8206FDF1864A50500FFDAA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C8206FE01864A50500FFDAA9 /* Build configuration list for PBXNativeTarget "P2MSStoryboardTests" */ = {
 			isa = XCConfigurationList;
@@ -577,6 +610,7 @@
 				C8206FE21864A50500FFDAA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
