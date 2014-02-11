@@ -24,7 +24,7 @@
 }
 
 - (void)timerFired:(NSTimer *)timer{
-    if (_targetObject) {
+    if (_targetObject && [timer isValid]) {
         [_targetObject performSelector:@selector(timerTip:) withObject:timer];
     }else{
         [timer invalidate];
@@ -62,7 +62,6 @@ static char const * const selectorKey = "selKeyTag";
     }
     [inv invoke];
 }
-
 
 - (void)cancelAllSelectors{
     NSMutableDictionary *allSelectors = self.selectors;
@@ -125,6 +124,7 @@ static char const * const selectorKey = "selKeyTag";
         if (!self.selectors) {
             self.selectors = [NSMutableDictionary dictionary];
         }
+//        NSLog(@"GUID %@ set", guidString);
         WeakTimerTarget *weakTarget = [[WeakTimerTarget alloc]initWithTarget:self];
         newTimerSelector.timer = [NSTimer scheduledTimerWithTimeInterval:delayTime target:weakTarget selector:@selector(timerFired:) userInfo:guidString repeats:NO];
         [self.selectors setObject:newTimerSelector forKey:guidString];
@@ -147,6 +147,7 @@ static char const * const selectorKey = "selKeyTag";
 
 - (IBAction)timerTip:(NSTimer *)sender{
     TimerSelector *timerSelToInvoke = [self.selectors objectForKey:sender.userInfo];
+//    NSLog(@"GUID %@ fired", sender.userInfo);
     if (timerSelToInvoke) {
         NSString *userInfo = sender.userInfo;
         id argument = [timerSelToInvoke.argument copy];

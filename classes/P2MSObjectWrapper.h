@@ -20,7 +20,10 @@
 + (NSString *)generateUniqueID;
 
 + (CGRect)getRectFromPoint:(NSString *)pointStr andSize:(NSString *)sizeStr withParentView:(UIView *)parentView;
++ (CGRect)getRectFromString:(NSString *)rectStr withParentView:(UIView *)parentView;
+
 + (CGFloat)getPosFromString:(NSString *)posStr withParentView:(UIView *)parentView;
 + (CGPoint)getPointFromString:(NSString *)pointStr withParentView:(UIView *)parentView;
++ (CGFloat)getScaleValueFromString:(NSString *)posStr withOriginalWidth:(CGFloat)originalWidth;
 
 @end

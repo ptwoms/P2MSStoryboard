@@ -22,7 +22,7 @@
 //Proxy object for target
 @interface WeakTimerTarget : NSObject
 
-@property (nonatomic, weak)NSObject *targetObject;
+@property (nonatomic, unsafe_unretained)NSObject *targetObject;
 
 - (id)initWithTarget:(id)target;
 

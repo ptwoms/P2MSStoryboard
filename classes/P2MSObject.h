@@ -23,7 +23,7 @@
 @property (nonatomic, retain) NSString *animationString;
 @property (nonatomic, retain) UIImageView *animateObject;
 
-@property (nonatomic, weak) id deleage;
+@property (nonatomic, unsafe_unretained) id deleage;
 
 - (void)loadObject:(NSString *)objectString inView:(UIView *)parentView withTag:(NSInteger)tagNumber;
 - (void)removeObject;

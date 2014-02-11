@@ -1,0 +1,39 @@
+bg_title_page.png
+#
+object title_text.png 57,-120,735,120 1,0,0 [[s_move:0,3,57,128;1];[s_move:0,0.25,57,125|s_move:0,0.25,57,128;1];1]
+#
+object_tap button_read.png 300,325,327,80 0,0,0 depend:0,1,2,2|s_alpha:0,0.25,1.0
+##
+bg_pg01.png
+#
+object pg01_text.png 37,136,526,196 1
+#
+object pg01_kid02.png 274,379,309,348 1 [animate:3.0,0.5,2,pg01_kid01.png#pg01_kid02.png|animate:2.5,0.5,3,pg01_kid01.png#pg01_kid02.png;0]
+#
+text #1 70,500,200,50 1,Helvitica,27,1,1,0,1
+###
+Help Mikey put on his hat!
+#
+object_drag pg01_kid_hat.png 90,610,166,65 1
+##
+bg_pg02.png
+#
+object pg02_cat.png 240,397,247,288 1
+#
+object pg02_text.png 412,116,537,245 1
+##
+bg_pg03.png
+#
+object pg03_kid_cat.png 487,354,367,330 1
+#
+object pg03_text.png 389,62,601,242 1
+##
+bg_pg04.png
+#
+object pg04_bunny.png 519,298,197,253 1
+#
+object pg04_cloud02.png 584,128,399,116 1
+#
+object pg04_cloud01.png 457,26,446,161 1
+#
+object pg04_text.png 43,107,457,250 1

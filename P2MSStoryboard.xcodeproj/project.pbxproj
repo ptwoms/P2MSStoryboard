@@ -12,6 +12,15 @@
 		C81A6F801888286F00253C5A /* P2MSAnimationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C81A6F7F1888286F00253C5A /* P2MSAnimationObject.m */; };
 		C81A6F831888291B00253C5A /* P2MSStandarBehaviors.m in Sources */ = {isa = PBXBuildFile; fileRef = C81A6F821888291B00253C5A /* P2MSStandarBehaviors.m */; };
 		C81A6F861888386200253C5A /* P2MSObjectAnimationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C81A6F851888386200253C5A /* P2MSObjectAnimationFactory.m */; };
+		C81C43ED189F380A005B228A /* P2MSStoryboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C81C43EC189F380A005B228A /* P2MSStoryboard.m */; };
+		C81C43F0189F3861005B228A /* P2MSSimpleAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C81C43EF189F3861005B228A /* P2MSSimpleAudioPlayer.m */; };
+		C81C43F2189F389E005B228A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C81C43F1189F389E005B228A /* AVFoundation.framework */; };
+		C81C43F4189F3A7F005B228A /* ExampleStory.txt in Resources */ = {isa = PBXBuildFile; fileRef = C81C43F3189F3A7F005B228A /* ExampleStory.txt */; };
+		C81C43F7189F3AEF005B228A /* P2MSScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C81C43F6189F3AEF005B228A /* P2MSScene.m */; };
+		C81CE15A18A7BFD2004A6E70 /* P2MSDefaultObjectSubClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C81CE15918A7BFD2004A6E70 /* P2MSDefaultObjectSubClass.m */; };
+		C81DC92418A67F6D00321EF1 /* P2MSTextObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C81DC92318A67F6D00321EF1 /* P2MSTextObject.m */; };
+		C81DC92718A6808000321EF1 /* P2MSDefaultObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C81DC92618A6808000321EF1 /* P2MSDefaultObject.m */; };
+		C81DC92A18A6871B00321EF1 /* P2MSAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C81DC92918A6871B00321EF1 /* P2MSAnimation.m */; };
 		C8206FB51864A50500FFDAA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8206FB41864A50500FFDAA9 /* Foundation.framework */; };
 		C8206FB71864A50500FFDAA9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8206FB61864A50500FFDAA9 /* CoreGraphics.framework */; };
 		C8206FB91864A50500FFDAA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8206FB81864A50500FFDAA9 /* UIKit.framework */; };
@@ -70,6 +79,22 @@
 		C81A6F821888291B00253C5A /* P2MSStandarBehaviors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P2MSStandarBehaviors.m; sourceTree = "<group>"; };
 		C81A6F841888386200253C5A /* P2MSObjectAnimationFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = P2MSObjectAnimationFactory.h; sourceTree = "<group>"; };
 		C81A6F851888386200253C5A /* P2MSObjectAnimationFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P2MSObjectAnimationFactory.m; sourceTree = "<group>"; };
+		C81C43EB189F380A005B228A /* P2MSStoryboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = P2MSStoryboard.h; sourceTree = "<group>"; };
+		C81C43EC189F380A005B228A /* P2MSStoryboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P2MSStoryboard.m; sourceTree = "<group>"; };
+		C81C43EE189F3861005B228A /* P2MSSimpleAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = P2MSSimpleAudioPlayer.h; sourceTree = "<group>"; };
+		C81C43EF189F3861005B228A /* P2MSSimpleAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P2MSSimpleAudioPlayer.m; sourceTree = "<group>"; };
+		C81C43F1189F389E005B228A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C81C43F3189F3A7F005B228A /* ExampleStory.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ExampleStory.txt; sourceTree = "<group>"; };
+		C81C43F5189F3AEF005B228A /* P2MSScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = P2MSScene.h; sourceTree = "<group>"; };
+		C81C43F6189F3AEF005B228A /* P2MSScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P2MSScene.m; sourceTree = "<group>"; };
+		C81CE15818A7BFD2004A6E70 /* P2MSDefaultObjectSubClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = P2MSDefaultObjectSubClass.h; sourceTree = "<group>"; };
+		C81CE15918A7BFD2004A6E70 /* P2MSDefaultObjectSubClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P2MSDefaultObjectSubClass.m; sourceTree = "<group>"; };
+		C81DC92218A67F6D00321EF1 /* P2MSTextObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = P2MSTextObject.h; sourceTree = "<group>"; };
+		C81DC92318A67F6D00321EF1 /* P2MSTextObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P2MSTextObject.m; sourceTree = "<group>"; };
+		C81DC92518A6808000321EF1 /* P2MSDefaultObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = P2MSDefaultObject.h; sourceTree = "<group>"; };
+		C81DC92618A6808000321EF1 /* P2MSDefaultObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P2MSDefaultObject.m; sourceTree = "<group>"; };
+		C81DC92818A6871B00321EF1 /* P2MSAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = P2MSAnimation.h; sourceTree = "<group>"; };
+		C81DC92918A6871B00321EF1 /* P2MSAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P2MSAnimation.m; sourceTree = "<group>"; };
 		C8206FB11864A50500FFDAA9 /* P2MSStoryboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = P2MSStoryboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8206FB41864A50500FFDAA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C8206FB61864A50500FFDAA9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -111,6 +136,7 @@
 		C82070151865F35B00FFDAA9 /* fish_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish_1.png; sourceTree = "<group>"; };
 		C82070161865F35B00FFDAA9 /* fish_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish_2.png; sourceTree = "<group>"; };
 		C82070171865F35B00FFDAA9 /* fish_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish_3.png; sourceTree = "<group>"; };
+		C8333FAA18A267C90088507E /* P2MSAbstractObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = P2MSAbstractObject.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C81C43F2189F389E005B228A /* AVFoundation.framework in Frameworks */,
 				C8206FB71864A50500FFDAA9 /* CoreGraphics.framework in Frameworks */,
 				C8206FB91864A50500FFDAA9 /* UIKit.framework in Frameworks */,
 				C8206FB51864A50500FFDAA9 /* Foundation.framework in Frameworks */,
@@ -140,6 +167,7 @@
 		C8206FA81864A50500FFDAA9 = {
 			isa = PBXGroup;
 			children = (
+				C81C43F3189F3A7F005B228A /* ExampleStory.txt */,
 				C8206FE31864A9D900FFDAA9 /* classes */,
 				C8206FF018653C9100FFDAA9 /* images */,
 				C8206FED18651D7400FFDAA9 /* P2MSExampleObjectAnimationViewController.h */,
@@ -163,6 +191,7 @@
 		C8206FB31864A50500FFDAA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C81C43F1189F389E005B228A /* AVFoundation.framework */,
 				C8206FB41864A50500FFDAA9 /* Foundation.framework */,
 				C8206FB61864A50500FFDAA9 /* CoreGraphics.framework */,
 				C8206FB81864A50500FFDAA9 /* UIKit.framework */,
@@ -223,12 +252,27 @@
 				C81A6F79188826CB00253C5A /* NSObject+P2MSPerformSelector.m */,
 				C81A6F7B1888275B00253C5A /* UIView+P2MSUIViewAnimation.h */,
 				C81A6F7C1888275B00253C5A /* UIView+P2MSUIViewAnimation.m */,
-				C81A6F7E1888286F00253C5A /* P2MSAnimationObject.h */,
-				C81A6F7F1888286F00253C5A /* P2MSAnimationObject.m */,
+				C8333FAA18A267C90088507E /* P2MSAbstractObject.h */,
+				C81DC92818A6871B00321EF1 /* P2MSAnimation.h */,
+				C81DC92918A6871B00321EF1 /* P2MSAnimation.m */,
 				C81A6F811888291B00253C5A /* P2MSStandarBehaviors.h */,
 				C81A6F821888291B00253C5A /* P2MSStandarBehaviors.m */,
 				C81A6F841888386200253C5A /* P2MSObjectAnimationFactory.h */,
 				C81A6F851888386200253C5A /* P2MSObjectAnimationFactory.m */,
+				C81C43EE189F3861005B228A /* P2MSSimpleAudioPlayer.h */,
+				C81C43EF189F3861005B228A /* P2MSSimpleAudioPlayer.m */,
+				C81C43EB189F380A005B228A /* P2MSStoryboard.h */,
+				C81C43EC189F380A005B228A /* P2MSStoryboard.m */,
+				C81C43F5189F3AEF005B228A /* P2MSScene.h */,
+				C81C43F6189F3AEF005B228A /* P2MSScene.m */,
+				C81DC92518A6808000321EF1 /* P2MSDefaultObject.h */,
+				C81DC92618A6808000321EF1 /* P2MSDefaultObject.m */,
+				C81CE15818A7BFD2004A6E70 /* P2MSDefaultObjectSubClass.h */,
+				C81CE15918A7BFD2004A6E70 /* P2MSDefaultObjectSubClass.m */,
+				C81DC92218A67F6D00321EF1 /* P2MSTextObject.h */,
+				C81DC92318A67F6D00321EF1 /* P2MSTextObject.m */,
+				C81A6F7E1888286F00253C5A /* P2MSAnimationObject.h */,
+				C81A6F7F1888286F00253C5A /* P2MSAnimationObject.m */,
 			);
 			path = classes;
 			sourceTree = "<group>";
@@ -353,6 +397,7 @@
 				C820700718653C9100FFDAA9 /* pluto_7.png in Resources */,
 				C820700618653C9100FFDAA9 /* pluto_6.png in Resources */,
 				C820700418653C9100FFDAA9 /* pluto_4.png in Resources */,
+				C81C43F4189F3A7F005B228A /* ExampleStory.txt in Resources */,
 				C820701B1865F35B00FFDAA9 /* fish_3.png in Resources */,
 				C820700118653C9100FFDAA9 /* pluto_2_2.png in Resources */,
 				C820700818653C9100FFDAA9 /* pluto_8.png in Resources */,
@@ -394,11 +439,18 @@
 				C81A6F801888286F00253C5A /* P2MSAnimationObject.m in Sources */,
 				C8206FEF18651D7400FFDAA9 /* P2MSExampleObjectAnimationViewController.m in Sources */,
 				C81A6F861888386200253C5A /* P2MSObjectAnimationFactory.m in Sources */,
+				C81DC92418A67F6D00321EF1 /* P2MSTextObject.m in Sources */,
+				C81DC92718A6808000321EF1 /* P2MSDefaultObject.m in Sources */,
+				C81C43F0189F3861005B228A /* P2MSSimpleAudioPlayer.m in Sources */,
+				C81CE15A18A7BFD2004A6E70 /* P2MSDefaultObjectSubClass.m in Sources */,
 				C81A6F7A188826CB00253C5A /* NSObject+P2MSPerformSelector.m in Sources */,
 				C8206FC51864A50500FFDAA9 /* AppDelegate.m in Sources */,
+				C81C43ED189F380A005B228A /* P2MSStoryboard.m in Sources */,
 				C81A6F7D1888275B00253C5A /* UIView+P2MSUIViewAnimation.m in Sources */,
+				C81DC92A18A6871B00321EF1 /* P2MSAnimation.m in Sources */,
 				C8206FE61864B62800FFDAA9 /* P2MSObject.m in Sources */,
 				C8206FC11864A50500FFDAA9 /* main.m in Sources */,
+				C81C43F7189F3AEF005B228A /* P2MSScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +575,7 @@
 				GCC_PREFIX_HEADER = "P2MSStoryboard/P2MSStoryboard-Prefix.pch";
 				INFOPLIST_FILE = "P2MSStoryboard/P2MSStoryboard-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -536,6 +589,7 @@
 				GCC_PREFIX_HEADER = "P2MSStoryboard/P2MSStoryboard-Prefix.pch";
 				INFOPLIST_FILE = "P2MSStoryboard/P2MSStoryboard-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

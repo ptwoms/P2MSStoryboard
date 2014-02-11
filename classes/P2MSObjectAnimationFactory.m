@@ -14,13 +14,44 @@
 
 + (id<P2MSObjectBehavior>)getBehaviorFromVerb:(NSString *)animVerb andParams:(NSArray *)params{
     id<P2MSObjectBehavior> behavior = nil;
-    NSArray *animParams = nil;
-    if (params.count > 2) {
-        animParams = [params subarrayWithRange:NSMakeRange(2, params.count-2)];
+    if ([animVerb hasPrefix:@"s_"]) {
+        NSArray *animParams = nil;
+        if (params.count > 2) {
+            animParams = [params subarrayWithRange:NSMakeRange(2, params.count-2)];
+        }
+        if ([animVerb hasPrefix:@"s_move"]) {
+            if ([animVerb hasSuffix:@"scale"]) {
+                behavior = [[P2MSMoveScaleBehavior alloc]initWithParameterArray:animParams andAnimPeriod:[[params objectAtIndex:1]floatValue]];
+            }else{
+                behavior = [[P2MSMoveBehavior alloc]initWithParameterArray:animParams andAnimPeriod:[[params objectAtIndex:1]floatValue]];
+            }
+        }else if ([animVerb rangeOfString:@"rotate"].length > 0){
+            if ([animVerb hasPrefix:@"s_clock"]) {
+                behavior = [[P2MSClockRotateBehavior alloc]initWithParameterArray:animParams andAnimPeriod:[[params objectAtIndex:1]floatValue]];
+            }else if([animVerb hasPrefix:@"s_flip"]){
+                behavior = [[P2MSFlipRotateBehavior alloc]initWithParameterArray:animParams andAnimPeriod:[[params objectAtIndex:1]floatValue]];
+            }else{
+                behavior = [[P2MSRotateBehavior alloc]initWithParameterArray:animParams andAnimPeriod:[[params objectAtIndex:1]floatValue]];
+            }
+        }else if ([animVerb isEqualToString:@"s_reset_transform"]){
+            behavior = [[ResetTransform alloc]initWithParameterArray:nil andAnimPeriod:0];
+        }else if ([animVerb isEqualToString:@"s_replace"]){
+            behavior = [[ReplaceImage alloc]initWithParameterArray:animParams andAnimPeriod:0];
+        }else if ([animVerb isEqualToString:@"s_alpha"]){
+            behavior = [[P2MSAlphaBehavior alloc]initWithParameterArray:animParams andAnimPeriod:[[params objectAtIndex:1]floatValue]];
+        }
+    }else{
+        NSArray *animParams = nil;
+        if (params.count > 1) {
+            animParams = [params subarrayWithRange:NSMakeRange(1, params.count-1)];
+        }
+        if([animVerb isEqualToString:@"depend"]){
+            behavior = [[AnimationObjectDependency alloc]initWithParameterArray:animParams andAnimPeriod:0];
+        }else if ([animVerb isEqualToString:@"animate"]){
+            behavior = [[P2MSImageAnimationBehavior alloc]initWithParameterArray:animParams andAnimPeriod:0];
+        }
     }
-    if ([animVerb isEqualToString:@"move"]) {
-        behavior = [[P2MSMoveBehavior alloc]initWithParameterArray:animParams andAnimPeriod:[[params objectAtIndex:1]floatValue]];
-    }
+
     return behavior;
 }
 

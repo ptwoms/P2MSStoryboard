@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "P2MSAnimationObject.h"
+#import "P2MSStoryboard.h"
 
-@interface P2MSExampleObjectAnimationViewController : UIViewController<P2MSAnimationObjectDelegate>
+@interface P2MSExampleObjectAnimationViewController : UIViewController<P2MSDefaultObjectDelegate, P2MSStoryboardDelegate>
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "P2MSAbstractObject.h"
 
 @class P2MSObjectBehavior;
 @class P2MSAnimationObject;
@@ -19,12 +20,12 @@
 
 @protocol P2MSObjectBehavior <NSObject>
 
-@property (nonatomic, weak) id<P2MSObjectBehaviorDelegate> delegate;//or assign
+@property (nonatomic, unsafe_unretained) id<P2MSObjectBehaviorDelegate> delegate;//or assign
 @property (nonatomic, retain) NSArray *parameters;
 @property (nonatomic) CGFloat animPeriod;
 
 - (id) initWithParameters:(NSString *)params andAnimPeriod:(CGFloat)animationPeriod;
 - (id)initWithParameterArray:(NSArray *)params andAnimPeriod:(CGFloat)animationPeriod;
-- (void)performBehaviorOnObject:(P2MSAnimationObject *)animObject;
+- (void)performBehaviorOnObject:(id<P2MSAbstractObject>)animObject;
 
 @end
