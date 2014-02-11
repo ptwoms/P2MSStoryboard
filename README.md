@@ -51,6 +51,8 @@ It works on IOS 4.3+
 
 You can create your own custom objects and animation behaviors by implementing ***P2MSAbstractObject*** and ***P2MSObjectBehavior*** protocols or can extend the default implemetations (***P2MSDefaultObject*** and ***P2MSStandardBehavior***).
 
+I will update the [wiki](https://github.com/ptwoms/P2MSStoryboard/wiki) later.
+
 
 ##Credits
 * <big>Sprite Images - <a href="https://archive.org/details/ug-sprite-sheet-collection-v2">Link</a></big>
