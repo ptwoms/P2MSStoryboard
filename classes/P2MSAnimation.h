@@ -23,8 +23,6 @@ typedef enum {
 }ANIMATION_STATE;
 
 
-//@class P2MSAnimationObject;
-
 @interface P2MSAnimation : NSObject
 @property (nonatomic, retain) NSArray *childAnimation;
 @property (nonatomic, retain) NSString *animationString;
@@ -36,7 +34,7 @@ typedef enum {
 
 + (id)animationString:(NSString *)animString repeatCount:(CGFloat)repeatCount serialIndex:(NSInteger)serialIndex;
 + (id)animationWithChildAnimations:(NSArray *)childAnimation repeatCount:(CGFloat)repeatCount serialStartIndex:(NSInteger)serialStartIndex;
-+ (id)animationString:(NSString *)animString;
++ (id)animationFromString:(NSString *)animString;
 
 
 @end

@@ -57,7 +57,7 @@
         P2MSAnimation *finalAnimation = nil;
         if (imgProperties.count > 4) {
             NSString *animStr = [imgProperties objectAtIndex:4];
-            finalAnimation = [P2MSAnimation animationString:animStr];
+            finalAnimation = [P2MSAnimation animationFromString:animStr];
         }
         [myObj loadObject:nil withAnimation:finalAnimation associatedParentView:self withTag:tag initialParams:[NSString stringWithFormat:@"%@ %@ %@", [imgProperties objectAtIndex:1], [imgProperties objectAtIndex:2], [imgProperties objectAtIndex:3]]];
         myObj.delegate = objDelegate;
@@ -75,7 +75,7 @@
         P2MSAnimation *finalAnimation = nil;
         if (txtProperties.count > 4) {
             NSString *animStr = [txtProperties objectAtIndex:4];
-            finalAnimation = [P2MSAnimation animationString:animStr];
+            finalAnimation = [P2MSAnimation animationFromString:animStr];
         }
         P2MSTextObject *textObj = [[P2MSTextObject alloc]init];
         [textObj loadObject:[objText subarrayWithRange:NSMakeRange(1, objText.count-1)] withAnimation:finalAnimation associatedParentView:self withTag:tag initialParams:[NSString stringWithFormat:@"%@ %@ %@", [txtProperties objectAtIndex:1], [txtProperties objectAtIndex:2], [txtProperties objectAtIndex:3]]];

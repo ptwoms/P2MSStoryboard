@@ -38,6 +38,11 @@
     [super viewDidLoad];
   
 //#ifdef SHOW_STORYBOOK
+
+    //This is the storyboard version of the work of Tammy Coron from www.raywenderlich.com. (http://www.raywenderlich.com/56858/how-to-create-an-interactive-childrens-book-for-the-ipad)
+    //It is required to import her artwork files to the project in order to run this example.
+    //http://cdn4.raywenderlich.com/downloads/TheSeasons_Finished.zip
+    
     if ([UIImage imageNamed:@"pg01_text.png"] && [[UIDevice currentDevice]userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         storyboard = [[P2MSStoryboard alloc]initWithFrame:self.view.bounds];
         storyboard.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
@@ -67,7 +72,6 @@
 //#else
     }else{
         //viewDidLoad is usually call in Portrait mode and need to wait until the rotation is completed
-        //please adjust the delay accordingly
         [self performSelector:@selector(loadObjects) withObject:nil afterDelay:0.01f];
         
     }
@@ -89,14 +93,15 @@
     P2MSObject *minute = [[P2MSObject alloc]init];
     [minute loadObject:@"default minute.png 3,93 153,28 0,0,0 alpha:1,0.5,1.0|clock_rotate:0,10,0" inView:self.view withTag:4];
 
+    
     //the references (performP2MSSelector & P2MSObjectBehavior) made in the P2MSAnimationObject are weak and it is required to retain the object until all the animation is done
     fishObj = [[P2MSAnimationObject alloc]init];
     P2MSAnimation *anim = [P2MSAnimation animationString:@"s_move:1,7,80%,175|s_replace:0,0,fish.png|s_flip_rotate:1,0,-1,1,-30|s_move:0,10,5%,100|s_reset_transform:0.1,0" repeatCount:2 serialIndex:0];
-//    P2MSAnimation *animation = [P2MSAnimation animationWithChildAnimations:[NSArray arrayWithObjects:anim, nil] repeatCount:1 serialStartIndex:1];
     [fishObj loadObject:nil withAnimation:anim associatedParentView:self.view withTag:5 initialParams:@"fish_3.png##fish_2.png##fish_1.png 20,170,59,52 1 1,0"];
     fishObj.delegate = self;
     [fishObj startTask];
-
+    
+    //    P2MSAnimation *animation = [P2MSAnimation animationWithChildAnimations:[NSArray arrayWithObjects:anim, nil] repeatCount:1 serialStartIndex:1];
 }
 
 - (void)animationDone:(P2MSAnimationObject *)animatedObject{

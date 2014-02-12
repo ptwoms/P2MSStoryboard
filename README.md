@@ -9,7 +9,7 @@ It works on IOS 4.3+
 
 
 ##Usage
-###P2MSObject
+####P2MSObject <small>(deprecated in favor of P2MSAnimationObject)</small>
     P2MSObject *object = [[P2MSObject alloc]init];
     object loadObject:@"Animation String" inView:canvasView withTag:imgTag];
     
@@ -25,8 +25,7 @@ It works on IOS 4.3+
 	fishObj = [[P2MSAnimationObject alloc]init];
 	
 	//create animation object
-    P2MSAnimation *anim = [P2MSAnimation animationString:@"s_move:1,7,80%,175|s_replace:0,0,fish.png|s_flip_rotate:1,0,-1,1,-30|s_move:0,10,5%,100|s_reset_transform:0.1,0" repeatCount:1 serialIndex:0];
-    P2MSAnimation *animation = [P2MSAnimation animationWithChildAnimations:[NSArray arrayWithObjects:anim, nil] repeatCount:1 serialStartIndex:1];
+    P2MSAnimation *animation = [P2MSAnimation animationString:@"s_move:1,7,80%,175|s_replace:0,0,fish.png|s_flip_rotate:1,0,-1,1,-30|s_move:0,10,5%,100|s_reset_transform:0.1,0" repeatCount:1 serialIndex:0];
     
     //create fishObj view
     [fishObj loadObject:nil withAnimation:animation associatedParentView:self.view withTag:5 initialParams:@"fish_3.png##fish_2.png##fish_1.png 20,170,59,52 1 1,0"];
@@ -34,6 +33,8 @@ It works on IOS 4.3+
     
     //start animation
     [fishObj startTask];
+    
+Please see the [wiki](https://github.com/ptwoms/P2MSStoryboard/wiki) for more information
 
 ###P2MSStoryboard
 
@@ -49,9 +50,7 @@ It works on IOS 4.3+
 
     [storyboard startReading];
 
-You can create your own custom objects and animation behaviors by implementing ***P2MSAbstractObject*** and ***P2MSObjectBehavior*** protocols or can extend the default implemetations (***P2MSDefaultObject*** and ***P2MSStandardBehavior***).
-
-I will update the [wiki](https://github.com/ptwoms/P2MSStoryboard/wiki) later.
+You can create your own custom objects and animation behaviors by implementing ***P2MSAbstractObject*** and ***P2MSObjectBehavior*** protocols or can extend the default implemetations (***P2MSDefaultObject*** and ***P2MSStandardBehavior***). Check the [wiki](https://github.com/ptwoms/P2MSStoryboard/wiki) for more information.
 
 
 ##Credits
@@ -60,4 +59,5 @@ I will update the [wiki](https://github.com/ptwoms/P2MSStoryboard/wiki) later.
 
 
 ###Contributions
-- <big>Contributions and suggestions are welcome</big>
+- <big>Contributions and Suggestions are welcome.</big>
+- <big>Please open issues for suggestions.</big>

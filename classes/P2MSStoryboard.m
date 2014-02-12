@@ -21,7 +21,8 @@
 
 - (void)loadScenesFromFilePath:(NSString *)filePath{
     NSError *error;
-    NSString *animString = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&error];
+    NSString *animRawString = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&error];
+    NSString *animString =  [animRawString stringByReplacingOccurrencesOfString:@"//.*\n" withString:@"" options:NSRegularExpressionSearch range:NSMakeRange(0, animRawString.length)];
     scenes = [animString componentsSeparatedByString:@"\n##\n"];
     _totalScenes = scenes.count;
 }

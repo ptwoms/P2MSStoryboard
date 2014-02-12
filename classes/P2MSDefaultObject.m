@@ -71,7 +71,7 @@
         [self stopTask:YES];
     }
     if (!keepAppearance) {
-        [view removeFromSuperview];
+        [self.view removeFromSuperview];
     }
     self.view = nil;
     self.delegate = nil;
@@ -125,7 +125,6 @@
         NSArray *animParams = [[animParts objectAtIndex:1]componentsSeparatedByString:@","];
         CGFloat delay = [[animParams objectAtIndex:0]floatValue];
         if (delay) {
-            NSLog(@"Perform P2MSSelector is called");
             [self performP2MSSelector:@selector(delayedAnimatoinSequence:) withObject:animParts afterDelay:delay];
         }else{
             NSString *animVerb = [animParts objectAtIndex:0];
@@ -165,6 +164,7 @@
 }
 
 - (void)dealloc{
+    [self removeObject:YES];
     NSLog(@"Animation object dealloc %@ %d", self.objectID, _animationState);
 }
 

@@ -70,7 +70,7 @@
 
 
 
-+ (id)animationString:(NSString *)animString{
++ (id)animationFromString:(NSString *)animString{
     NSString *trimmedString = [animString stringByReplacingOccurrencesOfString:@" " withString:@""];
     return [P2MSAnimation createAnimationsLinearly:trimmedString];
 }
