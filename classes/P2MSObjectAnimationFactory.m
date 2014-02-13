@@ -43,9 +43,9 @@
         }
         if([animVerb isEqualToString:@"depend"]){
             behavior = [[AnimationObjectDependency alloc]initWithParameterArray:animParams andAnimPeriod:0];
-        }else if ([animVerb isEqualToString:@"s_reset_transform"]){
+        }else if ([animVerb isEqualToString:@"reset_transform"]){
             behavior = [[ResetTransform alloc]initWithParameterArray:nil andAnimPeriod:0];
-        }else if ([animVerb isEqualToString:@"s_replace"]){
+        }else if ([animVerb isEqualToString:@"replace"]){
             behavior = [[ReplaceImage alloc]initWithParameterArray:animParams andAnimPeriod:0];
         }else if ([animVerb isEqualToString:@"animate"]){
             behavior = [[P2MSImageAnimationBehavior alloc]initWithParameterArray:animParams andAnimPeriod:0];
