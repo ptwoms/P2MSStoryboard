@@ -307,23 +307,23 @@
     [_animateView setImage:imageToReplace];
     CGRect curRect = _animateView.frame;
     NSUInteger animCount = self.parameters.count;
-    if (animCount > 2) {
+    if (animCount > 1) {
         NSString *newXPos = [self.parameters objectAtIndex:1];
         if (newXPos.length) {
             curRect.origin.x = [P2MSObjectWrapper getPosFromString:newXPos withParentView:_animateView.superview];
         }
-        if (animCount > 3) {
+        if (animCount > 2) {
             NSString *newYPos = [self.parameters objectAtIndex:2];
             if (newYPos.length) {
                 curRect.origin.y = [P2MSObjectWrapper getPosFromString:newYPos withParentView:_animateView.superview];
             }
-            if (animCount > 4) {
+            if (animCount > 3) {
                 NSString *newWidth = [self.parameters objectAtIndex:3];
                 if (newWidth.length) {
                     curRect.size.width = [newWidth floatValue];
                 }else
                     curRect.size.width = imageToReplace.size.width;
-                if (animCount > 5) {
+                if (animCount > 4) {
                     NSString *newHeight = [self.parameters objectAtIndex:4];
                     if (newHeight.length) {
                         curRect.size.height = [newHeight floatValue];
