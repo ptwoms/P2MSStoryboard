@@ -205,7 +205,7 @@
 
 - (void)performBehaviorOnObject:(P2MSAnimationObject *)animObject{
     UIView *_animateView = animObject.view;
-    CGFloat repeatCount = [[self.parameters objectAtIndex:2]floatValue];
+    CGFloat repeatCount = [[self.parameters objectAtIndex:0]floatValue];
     CALayer *layer = _animateView.layer;
     CAKeyframeAnimation *animation;
     animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.z"];
