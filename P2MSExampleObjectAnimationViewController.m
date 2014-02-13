@@ -96,7 +96,7 @@
     
     //the references (performP2MSSelector & P2MSObjectBehavior) made in the P2MSAnimationObject are weak and it is required to retain the object until all the animation is done
     fishObj = [[P2MSAnimationObject alloc]init];
-    P2MSAnimation *anim = [P2MSAnimation animationString:@"s_move:1,7,80%,175|s_replace:0,0,fish.png|s_flip_rotate:1,0,-1,1,-30|s_move:0,10,5%,100|s_reset_transform:0.1,0" repeatCount:2 serialIndex:0];
+    P2MSAnimation *anim = [P2MSAnimation animationString:@"s_move:1,7,80%,175|replace:0,fish.png|s_flip_rotate:1,0,-1,1,-30|s_move:0,10,5%,100|reset_transform:0.1" repeatCount:2 serialIndex:0];
     [fishObj loadObject:nil withAnimation:anim associatedParentView:self.view withTag:5 initialParams:@"fish_3.png##fish_2.png##fish_1.png 20,170,59,52 1 1,0"];
     fishObj.delegate = self;
     [fishObj startTask];
