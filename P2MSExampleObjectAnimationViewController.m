@@ -31,14 +31,10 @@
 }
 
 
-//#define SHOW_STORYBOOK 1
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
   
-//#ifdef SHOW_STORYBOOK
-
     //This is the storyboard version of the work of Tammy Coron from www.raywenderlich.com. (http://www.raywenderlich.com/56858/how-to-create-an-interactive-childrens-book-for-the-ipad)
     //It is required to import her artwork files to the project in order to run this example.
     //http://cdn4.raywenderlich.com/downloads/TheSeasons_Finished.zip
@@ -69,13 +65,11 @@
         nextBtn.frame = CGRectMake(900, 10, 56, 63);
         [nextBtn addTarget:self action:@selector(nextScene:) forControlEvents:UIControlEventTouchUpInside];
         [footer addSubview:nextBtn];
-//#else
     }else{
         //viewDidLoad is usually call in Portrait mode and need to wait until the rotation is completed
         [self performSelector:@selector(loadObjects) withObject:nil afterDelay:0.01f];
         
     }
-//#endif
 
 }
 

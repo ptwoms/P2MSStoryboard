@@ -48,12 +48,8 @@
 
 /////////////////////////////////////////////////
 // Move Behavior
+// s_move:delay_time,animation_period,to_X,to_Y
 /////////////////////////////////////////////////
-//@interface P2MSMoveBehavior(){
-//    UIView *object;
-//}
-//@end
-
 @implementation P2MSMoveBehavior
 
 - (void)performBehaviorOnObject:(P2MSAnimationObject *)animObject{
@@ -105,6 +101,7 @@
 
 /////////////////////////////////////////////////
 // Move Scale Behavior
+// s_move_scale:delay_time,animation_period,to_X,to_Y,to_Width,to_Height
 /////////////////////////////////////////////////
 @implementation P2MSMoveScaleBehavior
 @synthesize parameters = _parameters;
@@ -134,30 +131,35 @@
 
 /////////////////////////////////////////////////
 // ImageAnimation Behavior
+// animate:delay_time,animation_duration,animation_repeat_count,images_sep_by_#
 /////////////////////////////////////////////////
 @implementation P2MSImageAnimationBehavior
 
 - (void)performBehaviorOnObject:(id<P2MSAbstractObject>)animObject{
     UIView *_animateView = animObject.view;
     if ([_animateView isKindOfClass:[UIImageView class]]) {
-        NSArray *imageNames = [[self.parameters objectAtIndex:2]componentsSeparatedByString:@"#"];
-        if (imageNames.count) {
-            NSMutableArray *images = [NSMutableArray array];
-            for (NSString *imageName in imageNames) {
-                [images addObject:[UIImage imageNamed:imageName]];
+        if (self.parameters.count > 1) {
+            NSString *count = [self.parameters objectAtIndex:1];
+            if (count.length) {
+                CGFloat animCount = [count floatValue];
+                ((UIImageView *)_animateView).animationRepeatCount = (animCount == 0)?CGFLOAT_MAX:animCount;
             }
-            ((UIImageView *)_animateView).image = [images lastObject];
-            [((UIImageView *)_animateView) setAnimationImages:images];
+            if (self.parameters.count > 2) {
+                NSArray *imageNames = [[self.parameters objectAtIndex:2]componentsSeparatedByString:@"#"];
+                if (imageNames.count) {
+                    NSMutableArray *images = [NSMutableArray array];
+                    for (NSString *imageName in imageNames) {
+                        [images addObject:[UIImage imageNamed:imageName]];
+                    }
+                    ((UIImageView *)_animateView).image = [images lastObject];
+                    [((UIImageView *)_animateView) setAnimationImages:images];
+                }
+            }
         }
         NSString *period = [self.parameters objectAtIndex:0];
         if (period.length) {
             CGFloat animPeriod = [period floatValue];
             ((UIImageView *)_animateView).animationDuration = animPeriod;
-        }
-        NSString *count = [self.parameters objectAtIndex:1];
-        if (count.length) {
-            CGFloat animCount = [count floatValue];
-            ((UIImageView *)_animateView).animationRepeatCount = (animCount == 0)?CGFLOAT_MAX:animCount;
         }
         [((UIImageView *)_animateView) startAnimating];
     }

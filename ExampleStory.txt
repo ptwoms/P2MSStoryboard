@@ -11,7 +11,8 @@ bg_pg01.png
 #
 object pg01_text.png 37,136,526,196 1
 #
-object pg01_kid02.png 274,379,309,348 1 [animate:3.0,0.5,2,pg01_kid01.png#pg01_kid02.png|animate:2.5,0.5,3,pg01_kid01.png#pg01_kid02.png;0]
+//created one animation with image names at first to avoid repetitive assigning
+object pg01_kid02.png 274,379,309,348 1 [[animate:2.0,0.5,2,pg01_kid01.png#pg01_kid02.png;1];[animate:3.0,0.5,2|animate:2.5,0.5,3;0];1]
 #
 text #1 70,500,200,50 1,Helvitica,27,1,1,0,1
 ###
