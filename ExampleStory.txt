@@ -1,6 +1,3 @@
-//This is the storyboard version of the work of Tammy Coron from www.raywenderlich.com. (http://www.raywenderlich.com/56858/how-to-create-an-interactive-childrens-book-for-the-ipad)
-//It is required to import her artwork files to the project in order to run this example.
-//
 bg_title_page.png
 #
 object title_text.png 57,-120,735,120 1,0,0 [[s_move:0,3,57,128;1];[s_move:0,0.25,57,125|s_move:0,0.25,57,128;1];3]
@@ -11,8 +8,7 @@ bg_pg01.png
 #
 object pg01_text.png 37,136,526,196 1
 #
-//created one animation with image names at first to avoid repetitive assigning
-object pg01_kid02.png 274,379,309,348 1 [[animate:2.0,0.5,2,pg01_kid01.png#pg01_kid02.png;1];[animate:3.0,0.5,2|animate:2.5,0.5,3;0];1]
+object pg01_kid02.png 274,379,309,348 1 [[animate:2.0,0.5,2,pg01_kid01.png##pg01_kid02.png;1];[animate:3.0,0.5,2|animate:2.5,0.5,3;0];1]
 #
 text #1 70,500,200,50 1,Helvitica,27,1,1,0,1
 ###

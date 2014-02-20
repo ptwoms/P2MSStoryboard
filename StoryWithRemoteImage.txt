@@ -1,0 +1,7 @@
+http://www.utepprintstore.com/wp-content/uploads/Free-Wallpaper-for-The-Computer-Bubbles-1024x768.jpg
+#
+object http://ptwoms.me/test_images/Pluto/pluto_1.png##http://ptwoms.me/test_images/Pluto/pluto_2.png##http://ptwoms.me/test_images/Pluto/pluto_3.png##http://ptwoms.me/test_images/Pluto/pluto_4.png##http://ptwoms.me/test_images/Pluto/pluto_5.png##http://ptwoms.me/test_images/Pluto/pluto_6.png##http://ptwoms.me/test_images/Pluto/pluto_7.png##http://ptwoms.me/test_images/Pluto/pluto_8.png 105,50%,95,49 1,1,0 s_move:0.1,7,70%,50%|animate:0,1,0,http://ptwoms.me/test_images/Pluto/pluto_2_1.png##http://ptwoms.me/test_images/Pluto/pluto_2_2.png##http://ptwoms.me/test_images/Pluto/pluto_2_3.png,75%,,,
+##
+http://www.utepprintstore.com/wp-content/uploads/Free-Wallpaper-for-The-Computer-London-1024x640.jpg
+#
+object http://ptwoms.me/test_images/fish/fish_3.png##http://ptwoms.me/test_images/fish/fish_2.png##http://ptwoms.me/test_images/fish/fish_1.png 20,170,59,52 1,1,0 s_move:1,7,80%,175|replace:0,http://ptwoms.me/test_images/fish/fish.png|s_flip_rotate:1,0,-1,1,-30|s_move:0,10,5%,100|reset_transform:0.1

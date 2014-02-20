@@ -12,7 +12,7 @@
 
 @implementation P2MSObjectAnimationFactory
 
-+ (id<P2MSObjectBehavior>)getBehaviorFromVerb:(NSString *)animVerb andParams:(NSArray *)params{
++ (id<P2MSObjectBehavior>)getBehaviorFromVerb:(NSString *)animVerb andParams:(NSArray *)params forObjectType:(OBJECT_TYPE)objectType{
     id<P2MSObjectBehavior> behavior = nil;
     if ([animVerb hasPrefix:@"s_"]) {
         NSArray *animParams = nil;
@@ -46,8 +46,12 @@
         }else if ([animVerb isEqualToString:@"reset_transform"]){
             behavior = [[ResetTransform alloc]initWithParameterArray:nil andAnimPeriod:0];
         }else if ([animVerb isEqualToString:@"replace"]){
-            behavior = [[ReplaceImage alloc]initWithParameterArray:animParams andAnimPeriod:0];
-        }else if ([animVerb isEqualToString:@"animate"]){
+            if (objectType == OBJECT_TYPE_IMAGE) {
+                behavior = [[ReplaceImage alloc]initWithParameterArray:animParams andAnimPeriod:0];
+            }else{
+                
+            }
+        }else if ([animVerb isEqualToString:@"animate"] && objectType == OBJECT_TYPE_IMAGE){
             behavior = [[P2MSImageAnimationBehavior alloc]initWithParameterArray:animParams andAnimPeriod:0];
         }
     }

@@ -10,35 +10,46 @@
 #import "P2MSObjectWrapper.h"
 #import "P2MSAnimationObject.h"
 #import "P2MSTextObject.h"
+#import "AdditionalFunctions.h"
 
 @interface P2MSScene(){
 }
+
+@property (nonatomic, retain) NSString *sceneStr;
 
 @end
 
 @implementation P2MSScene
 
+/////////////////////////////////////////////////////////////////////////////
+//create tagged scene object from sceneString
+// boundRect -> scene rect
+/////////////////////////////////////////////////////////////////////////////
 + (P2MSScene *)loadScene:(NSString *)sceneString inRect:(CGRect)boundRect withTag:(NSInteger)tag andObjectDelegate:(id<P2MSDefaultObjectDelegate>)ObjectDelegate{
     P2MSScene *drawingCanvas = [[P2MSScene alloc]initWithFrame:boundRect];
+    drawingCanvas.sceneStr = sceneString;
     drawingCanvas.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     drawingCanvas.tag = tag;
     
     NSArray *arr = [sceneString componentsSeparatedByString:@"\n#\n"];
     NSArray *bkGroundProperties = [[arr objectAtIndex:0]componentsSeparatedByString:@" "];
     
-    NSString *fileName = [bkGroundProperties objectAtIndex:0];
-    UIImage *backgroundImage = [UIImage imageNamed:fileName];
-    
-    UIImageView *backGroundView = [[UIImageView alloc]initWithImage:backgroundImage];
-    CGFloat bkAlpha = 1.0f;
-    if (bkGroundProperties.count > 2) {
-        bkAlpha = [[bkGroundProperties objectAtIndex:2]floatValue];
+    if (bkGroundProperties.count) {
+        NSString *fileName = [bkGroundProperties objectAtIndex:0];
+        if (fileName) {
+            UIImage *backgroundImage = [AdditionalFunctions imageFromPath:fileName];
+            UIImageView *backGroundView = [[UIImageView alloc]initWithImage:backgroundImage];
+            CGFloat bkAlpha = 1.0f;
+            if (bkGroundProperties.count > 2) {
+                bkAlpha = [[bkGroundProperties objectAtIndex:2]floatValue];
+            }
+            backGroundView.frame = CGRectMake(0, 0, drawingCanvas.frame.size.width, drawingCanvas.frame.size.height);
+            backGroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+            backGroundView.alpha = bkAlpha;
+            [drawingCanvas addSubview:backGroundView];
+        }
     }
-    backGroundView.frame = CGRectMake(0, 0, drawingCanvas.frame.size.width, drawingCanvas.frame.size.height);
-    backGroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    backGroundView.alpha = bkAlpha;
-    [drawingCanvas addSubview:backGroundView];
-    
+
     if (arr.count > 1) {
         for (int i = 1; i < arr.count; i++) {
             [drawingCanvas loadObjectForString:[arr objectAtIndex:i] withTag:i andDelegate:ObjectDelegate];
@@ -47,6 +58,9 @@
     return drawingCanvas;
 }
 
+/////////////////////////////////////////////////////////////////////////////
+//create tagged view object from objString description
+/////////////////////////////////////////////////////////////////////////////
 - (void)loadObjectForString:(NSString *)objString withTag:(NSInteger)tag andDelegate:(id<P2MSDefaultObjectDelegate>)objDelegate{
     if (!_objectsInScene) {
         _objectsInScene = [NSMutableArray array];
@@ -84,12 +98,19 @@
     }
 }
 
+/////////////////////////////////////////////////////////////////////////////
+// start loaded scene animation
+/////////////////////////////////////////////////////////////////////////////
 - (void)startAnimation{
     for (P2MSAnimationObject *animObject in _objectsInScene) {
         [animObject startTask];
     }
 }
 
+/////////////////////////////////////////////////////////////////////////////
+// stop scene animation
+// all the animations and objects in the scene are removed (but view is keep showing) after calling this method
+/////////////////////////////////////////////////////////////////////////////
 - (void)stopAnimation{
     for (P2MSAnimationObject *animObject in _objectsInScene) {
         [animObject removeObject:YES];

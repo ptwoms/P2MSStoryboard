@@ -11,7 +11,7 @@
 
 @interface P2MSObjectAnimationFactory : NSObject
 
-+ (id<P2MSObjectBehavior>)getBehaviorFromVerb:(NSString *)animVerb andParams:(NSArray *)params;
++ (id<P2MSObjectBehavior>)getBehaviorFromVerb:(NSString *)animVerb andParams:(NSArray *)params forObjectType:(OBJECT_TYPE)objectType;
 
 
 @end

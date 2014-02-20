@@ -47,6 +47,7 @@
     return animation;
 }
 
+//create animation with animation string
 + (id)animationString:(NSString *)animString repeatCount:(CGFloat)repeatCount serialIndex:(NSInteger)serialIndex{
     P2MSAnimation *animation = [[P2MSAnimation alloc]init];
     animation.repeatCount = (repeatCount == 0)?CGFLOAT_MAX:repeatCount;
@@ -55,6 +56,7 @@
     return animation;
 }
 
+//create animation with child animations
 + (id)animationWithChildAnimations:(NSArray *)childAnimation repeatCount:(CGFloat)repeatCount serialStartIndex:(NSInteger)serialStartIndex{
     P2MSAnimation *animation = [[P2MSAnimation alloc]init];
     animation.repeatCount = (repeatCount == 0)?CGFLOAT_MAX:repeatCount;
@@ -68,10 +70,9 @@
     return animation;
 }
 
-
-
-+ (id)animationFromString:(NSString *)animString{
-    NSString *trimmedString = [animString stringByReplacingOccurrencesOfString:@" " withString:@""];
+//create animation from string representation
++ (id)animationFromString:(NSString *)stringRep{
+    NSString *trimmedString = [stringRep stringByReplacingOccurrencesOfString:@" " withString:@""];
     return [P2MSAnimation createAnimationsLinearly:trimmedString];
 }
 

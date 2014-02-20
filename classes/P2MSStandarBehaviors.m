@@ -9,6 +9,7 @@
 #import "P2MSStandarBehaviors.h"
 #import "P2MSAnimationObject.h"
 #import "P2MSObjectWrapper.h"
+#import "AdditionalFunctions.h"
 
 @interface P2MSStandardBehavior()
 
@@ -131,28 +132,62 @@
 
 /////////////////////////////////////////////////
 // ImageAnimation Behavior
-// animate:delay_time,animation_duration,animation_repeat_count,images_sep_by_#
+// animate:delay_time,animation_duration,animation_repeat_count,images_sep_by_##
 /////////////////////////////////////////////////
 @implementation P2MSImageAnimationBehavior
 
 - (void)performBehaviorOnObject:(id<P2MSAbstractObject>)animObject{
     UIView *_animateView = animObject.view;
     if ([_animateView isKindOfClass:[UIImageView class]]) {
-        if (self.parameters.count > 1) {
+        NSUInteger animParamCount = self.parameters.count;
+
+        if (animParamCount > 1) {
             NSString *count = [self.parameters objectAtIndex:1];
             if (count.length) {
                 CGFloat animCount = [count floatValue];
                 ((UIImageView *)_animateView).animationRepeatCount = (animCount == 0)?CGFLOAT_MAX:animCount;
             }
-            if (self.parameters.count > 2) {
-                NSArray *imageNames = [[self.parameters objectAtIndex:2]componentsSeparatedByString:@"#"];
+            if (animParamCount > 2) {
+                UIImage *tempImg = nil;
+                NSArray *imageNames = [[self.parameters objectAtIndex:2]componentsSeparatedByString:@"##"];
                 if (imageNames.count) {
                     NSMutableArray *images = [NSMutableArray array];
                     for (NSString *imageName in imageNames) {
-                        [images addObject:[UIImage imageNamed:imageName]];
+                        [images addObject:[AdditionalFunctions imageFromPath:imageName]];
                     }
+                    tempImg = [images lastObject];
                     ((UIImageView *)_animateView).image = [images lastObject];
                     [((UIImageView *)_animateView) setAnimationImages:images];
+                }
+                if (animParamCount > 3) {
+                    CGRect curRect = _animateView.frame;
+                    curRect.size = _animateView.bounds.size;
+                    NSString *newXPos = [self.parameters objectAtIndex:3];
+                    if (newXPos.length) {
+                        curRect.origin.x = [P2MSObjectWrapper getPosFromString:newXPos withParentView:_animateView.superview];
+                    }
+                    if (animParamCount > 4) {
+                        NSString *newYPos = [self.parameters objectAtIndex:4];
+                        if (newYPos.length) {
+                            curRect.origin.y = [P2MSObjectWrapper getPosFromString:newYPos withParentView:_animateView.superview];
+                        }
+                        if (animParamCount > 5) {
+                            NSString *newWidth = [self.parameters objectAtIndex:5];
+                            if (newWidth.length) {
+                                curRect.size.width = [newWidth floatValue];
+                            }else if(tempImg){
+                                curRect.size.width = tempImg.size.width;
+                            }
+                            if (animParamCount > 6) {
+                                NSString *newHeight = [self.parameters objectAtIndex:6];
+                                if (newHeight.length) {
+                                    curRect.size.height = [newHeight floatValue];
+                                }else if(tempImg)
+                                    curRect.size.height = tempImg.size.height;
+                            }
+                        }
+                    }
+                    _animateView.frame = curRect;
                 }
             }
         }
@@ -173,6 +208,7 @@
 
 /////////////////////////////////////////////////
 // Rotate Behavior
+// s_rotate:delay_time,animation_period,to_degree
 /////////////////////////////////////////////////
 @implementation P2MSRotateBehavior
 
@@ -202,6 +238,7 @@
 
 /////////////////////////////////////////////////
 // Rotate Behavior
+// s_rotate:delay_time,animation_period,to_degree
 /////////////////////////////////////////////////
 @implementation P2MSClockRotateBehavior
 
@@ -244,6 +281,7 @@
 
 /////////////////////////////////////////////////
 // Flip-Rotate Behavior
+// s_flip_rotate:delay_time,animation_period,scaleX,scaleY,to_degree
 /////////////////////////////////////////////////
 @implementation P2MSFlipRotateBehavior
 
@@ -276,6 +314,7 @@
 
 /////////////////////////////////////////////////
 // Fade Behavior
+// s_alpha:delay_time,animation_period,to_alpha_value
 /////////////////////////////////////////////////
 @implementation P2MSAlphaBehavior
 
@@ -295,6 +334,7 @@
 
 /////////////////////////////////////////////////
 // Replace Image
+// replace:delay_time,image_name,(newX),(newY),(newWidth),(newHeight)
 /////////////////////////////////////////////////
 @implementation ReplaceImage
 
@@ -305,7 +345,7 @@
     UIImageView *_animateView = (UIImageView *)animObject.view;
     [_animateView stopAnimating];
     NSString *imageName = [self.parameters objectAtIndex:0];
-    UIImage *imageToReplace = [UIImage imageNamed:imageName];
+    UIImage *imageToReplace = [AdditionalFunctions imageFromPath:imageName];
     [_animateView setImage:imageToReplace];
     CGRect curRect = _animateView.frame;
     NSUInteger animCount = self.parameters.count;
@@ -345,6 +385,7 @@
 
 /////////////////////////////////////////////////
 // Reset Transform
+// reset_transform:delay_time
 /////////////////////////////////////////////////
 @implementation ResetTransform
 
@@ -359,6 +400,7 @@
 
 /////////////////////////////////////////////////
 // Dependency to other object
+// depend:delay_time,obj_tag_to_wait,obj_animation_index,animation_sub_index, repeat_count
 /////////////////////////////////////////////////
 @interface AnimationObjectDependency(){
     NSInteger serialIndex, subIndex, repeatCount, object_tag;

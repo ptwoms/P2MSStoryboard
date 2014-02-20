@@ -12,6 +12,10 @@
 		C81A6F801888286F00253C5A /* P2MSAnimationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C81A6F7F1888286F00253C5A /* P2MSAnimationObject.m */; };
 		C81A6F831888291B00253C5A /* P2MSStandarBehaviors.m in Sources */ = {isa = PBXBuildFile; fileRef = C81A6F821888291B00253C5A /* P2MSStandarBehaviors.m */; };
 		C81A6F861888386200253C5A /* P2MSObjectAnimationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C81A6F851888386200253C5A /* P2MSObjectAnimationFactory.m */; };
+		C81BB27A18B4F1B500FB1E44 /* draft_button_right.png in Resources */ = {isa = PBXBuildFile; fileRef = C81BB27618B4F1B500FB1E44 /* draft_button_right.png */; };
+		C81BB27B18B4F1B500FB1E44 /* draft_button_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C81BB27718B4F1B500FB1E44 /* draft_button_right@2x.png */; };
+		C81BB27C18B4F1B500FB1E44 /* draft_button_left.png in Resources */ = {isa = PBXBuildFile; fileRef = C81BB27818B4F1B500FB1E44 /* draft_button_left.png */; };
+		C81BB27D18B4F1B500FB1E44 /* draft_button_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C81BB27918B4F1B500FB1E44 /* draft_button_left@2x.png */; };
 		C81C43ED189F380A005B228A /* P2MSStoryboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C81C43EC189F380A005B228A /* P2MSStoryboard.m */; };
 		C81C43F0189F3861005B228A /* P2MSSimpleAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C81C43EF189F3861005B228A /* P2MSSimpleAudioPlayer.m */; };
 		C81C43F2189F389E005B228A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C81C43F1189F389E005B228A /* AVFoundation.framework */; };
@@ -55,6 +59,10 @@
 		C82070191865F35B00FFDAA9 /* fish_1.png in Resources */ = {isa = PBXBuildFile; fileRef = C82070151865F35B00FFDAA9 /* fish_1.png */; };
 		C820701A1865F35B00FFDAA9 /* fish_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C82070161865F35B00FFDAA9 /* fish_2.png */; };
 		C820701B1865F35B00FFDAA9 /* fish_3.png in Resources */ = {isa = PBXBuildFile; fileRef = C82070171865F35B00FFDAA9 /* fish_3.png */; };
+		C83DFE0018B391060058BD06 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = C83DFDFF18B391060058BD06 /* NSString+MD5.m */; };
+		C8807B3318B0EFC2007D34F0 /* LazyImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = C8807B3218B0EFC2007D34F0 /* LazyImageDownloader.m */; };
+		C8807B3518B0F929007D34F0 /* StoryWithRemoteImage.txt in Resources */ = {isa = PBXBuildFile; fileRef = C8807B3418B0F929007D34F0 /* StoryWithRemoteImage.txt */; };
+		C895E0BE18B250F400C419B7 /* AdditionalFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = C895E0BD18B250F400C419B7 /* AdditionalFunctions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +87,10 @@
 		C81A6F821888291B00253C5A /* P2MSStandarBehaviors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P2MSStandarBehaviors.m; sourceTree = "<group>"; };
 		C81A6F841888386200253C5A /* P2MSObjectAnimationFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = P2MSObjectAnimationFactory.h; sourceTree = "<group>"; };
 		C81A6F851888386200253C5A /* P2MSObjectAnimationFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P2MSObjectAnimationFactory.m; sourceTree = "<group>"; };
+		C81BB27618B4F1B500FB1E44 /* draft_button_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = draft_button_right.png; sourceTree = "<group>"; };
+		C81BB27718B4F1B500FB1E44 /* draft_button_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "draft_button_right@2x.png"; sourceTree = "<group>"; };
+		C81BB27818B4F1B500FB1E44 /* draft_button_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = draft_button_left.png; sourceTree = "<group>"; };
+		C81BB27918B4F1B500FB1E44 /* draft_button_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "draft_button_left@2x.png"; sourceTree = "<group>"; };
 		C81C43EB189F380A005B228A /* P2MSStoryboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = P2MSStoryboard.h; sourceTree = "<group>"; };
 		C81C43EC189F380A005B228A /* P2MSStoryboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P2MSStoryboard.m; sourceTree = "<group>"; };
 		C81C43EE189F3861005B228A /* P2MSSimpleAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = P2MSSimpleAudioPlayer.h; sourceTree = "<group>"; };
@@ -137,6 +149,13 @@
 		C82070161865F35B00FFDAA9 /* fish_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish_2.png; sourceTree = "<group>"; };
 		C82070171865F35B00FFDAA9 /* fish_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish_3.png; sourceTree = "<group>"; };
 		C8333FAA18A267C90088507E /* P2MSAbstractObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = P2MSAbstractObject.h; sourceTree = "<group>"; };
+		C83DFDFE18B391060058BD06 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		C83DFDFF18B391060058BD06 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		C8807B3118B0EFC2007D34F0 /* LazyImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyImageDownloader.h; sourceTree = "<group>"; };
+		C8807B3218B0EFC2007D34F0 /* LazyImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyImageDownloader.m; sourceTree = "<group>"; };
+		C8807B3418B0F929007D34F0 /* StoryWithRemoteImage.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StoryWithRemoteImage.txt; sourceTree = "<group>"; };
+		C895E0BC18B250F400C419B7 /* AdditionalFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdditionalFunctions.h; sourceTree = "<group>"; };
+		C895E0BD18B250F400C419B7 /* AdditionalFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdditionalFunctions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +186,7 @@
 		C8206FA81864A50500FFDAA9 = {
 			isa = PBXGroup;
 			children = (
+				C8807B3418B0F929007D34F0 /* StoryWithRemoteImage.txt */,
 				C81C43F3189F3A7F005B228A /* ExampleStory.txt */,
 				C8206FE31864A9D900FFDAA9 /* classes */,
 				C8206FF018653C9100FFDAA9 /* images */,
@@ -243,6 +263,8 @@
 		C8206FE31864A9D900FFDAA9 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				C8807B3118B0EFC2007D34F0 /* LazyImageDownloader.h */,
+				C8807B3218B0EFC2007D34F0 /* LazyImageDownloader.m */,
 				C8206FE41864B62800FFDAA9 /* P2MSObject.h */,
 				C8206FE51864B62800FFDAA9 /* P2MSObject.m */,
 				C8206FE71864B77500FFDAA9 /* P2MSObjectWrapper.h */,
@@ -273,6 +295,10 @@
 				C81DC92318A67F6D00321EF1 /* P2MSTextObject.m */,
 				C81A6F7E1888286F00253C5A /* P2MSAnimationObject.h */,
 				C81A6F7F1888286F00253C5A /* P2MSAnimationObject.m */,
+				C895E0BC18B250F400C419B7 /* AdditionalFunctions.h */,
+				C895E0BD18B250F400C419B7 /* AdditionalFunctions.m */,
+				C83DFDFE18B391060058BD06 /* NSString+MD5.h */,
+				C83DFDFF18B391060058BD06 /* NSString+MD5.m */,
 			);
 			path = classes;
 			sourceTree = "<group>";
@@ -280,6 +306,10 @@
 		C8206FF018653C9100FFDAA9 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C81BB27618B4F1B500FB1E44 /* draft_button_right.png */,
+				C81BB27718B4F1B500FB1E44 /* draft_button_right@2x.png */,
+				C81BB27818B4F1B500FB1E44 /* draft_button_left.png */,
+				C81BB27918B4F1B500FB1E44 /* draft_button_left@2x.png */,
 				C82070131865F35B00FFDAA9 /* fish */,
 				C820700D18658B3E00FFDAA9 /* hour.png */,
 				C820700E18658B3E00FFDAA9 /* minute.png */,
@@ -399,17 +429,22 @@
 				C820700418653C9100FFDAA9 /* pluto_4.png in Resources */,
 				C81C43F4189F3A7F005B228A /* ExampleStory.txt in Resources */,
 				C820701B1865F35B00FFDAA9 /* fish_3.png in Resources */,
+				C81BB27D18B4F1B500FB1E44 /* draft_button_left@2x.png in Resources */,
 				C820700118653C9100FFDAA9 /* pluto_2_2.png in Resources */,
 				C820700818653C9100FFDAA9 /* pluto_8.png in Resources */,
 				C8206FFE18653C9100FFDAA9 /* pluto_1.png in Resources */,
 				C820701018658B3E00FFDAA9 /* hour.png in Resources */,
+				C81BB27B18B4F1B500FB1E44 /* draft_button_right@2x.png in Resources */,
+				C81BB27A18B4F1B500FB1E44 /* draft_button_right.png in Resources */,
 				C820700218653C9100FFDAA9 /* pluto_2_3.png in Resources */,
 				C8206FBF1864A50500FFDAA9 /* InfoPlist.strings in Resources */,
 				C820701118658B3E00FFDAA9 /* minute.png in Resources */,
 				C820700318653C9100FFDAA9 /* pluto_3.png in Resources */,
 				C82070181865F35B00FFDAA9 /* fish.png in Resources */,
 				C820700918653C9100FFDAA9 /* pluto_sit.png in Resources */,
+				C8807B3518B0F929007D34F0 /* StoryWithRemoteImage.txt in Resources */,
 				C8206FC71864A50500FFDAA9 /* Images.xcassets in Resources */,
+				C81BB27C18B4F1B500FB1E44 /* draft_button_left.png in Resources */,
 				C820701218658B3E00FFDAA9 /* clock_base.png in Resources */,
 				C8206FFF18653C9100FFDAA9 /* pluto_2.png in Resources */,
 				C820701A1865F35B00FFDAA9 /* fish_2.png in Resources */,
@@ -434,8 +469,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C895E0BE18B250F400C419B7 /* AdditionalFunctions.m in Sources */,
 				C8206FE91864B77500FFDAA9 /* P2MSObjectWrapper.m in Sources */,
+				C83DFE0018B391060058BD06 /* NSString+MD5.m in Sources */,
 				C81A6F831888291B00253C5A /* P2MSStandarBehaviors.m in Sources */,
+				C8807B3318B0EFC2007D34F0 /* LazyImageDownloader.m in Sources */,
 				C81A6F801888286F00253C5A /* P2MSAnimationObject.m in Sources */,
 				C8206FEF18651D7400FFDAA9 /* P2MSExampleObjectAnimationViewController.m in Sources */,
 				C81A6F861888386200253C5A /* P2MSObjectAnimationFactory.m in Sources */,
@@ -574,6 +612,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "P2MSStoryboard/P2MSStoryboard-Prefix.pch";
 				INFOPLIST_FILE = "P2MSStoryboard/P2MSStoryboard-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -588,6 +627,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "P2MSStoryboard/P2MSStoryboard-Prefix.pch";
 				INFOPLIST_FILE = "P2MSStoryboard/P2MSStoryboard-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;

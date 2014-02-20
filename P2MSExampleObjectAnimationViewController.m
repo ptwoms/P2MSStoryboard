@@ -15,6 +15,7 @@
     P2MSStoryboard *storyboard;
     UIImageView *footer;
     UIButton *prevBtn, *nextBtn;
+    BOOL isStoryBook;
 }
 
 @end
@@ -30,46 +31,67 @@
     return self;
 }
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    storyboard = [[P2MSStoryboard alloc]initWithFrame:self.view.bounds];
+    storyboard.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+    [self.view addSubview:storyboard];
   
     //This is the storyboard version of the work of Tammy Coron from www.raywenderlich.com. (http://www.raywenderlich.com/56858/how-to-create-an-interactive-childrens-book-for-the-ipad)
     //It is required to import her artwork files to the project in order to run this example.
     //http://cdn4.raywenderlich.com/downloads/TheSeasons_Finished.zip
     
+    footer = [[UIImageView alloc]initWithFrame:CGRectMake(0, 688, 1024, 80)];
+    footer.userInteractionEnabled = YES;
+    
+    prevBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    prevBtn.frame = CGRectMake(800, 10, 56, 63);
+    [prevBtn addTarget:self action:@selector(prevScene:) forControlEvents:UIControlEventTouchUpInside];
+    [footer addSubview:prevBtn];
+    
+    nextBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    nextBtn.frame = CGRectMake(900, 10, 56, 63);
+    [nextBtn addTarget:self action:@selector(nextScene:) forControlEvents:UIControlEventTouchUpInside];
+    [footer addSubview:nextBtn];
+
+    
     if ([UIImage imageNamed:@"pg01_text.png"] && [[UIDevice currentDevice]userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        storyboard = [[P2MSStoryboard alloc]initWithFrame:self.view.bounds];
-        storyboard.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-        NSString *filePath = [[NSBundle mainBundle]pathForResource:@"ExampleStory" ofType:@"txt"];
-        [self.view addSubview:storyboard];
-        [storyboard loadScenesFromFilePath:filePath];
-        storyboard.delegate = self;
-        [storyboard startReading];
-        
-        footer = [[UIImageView alloc]initWithFrame:CGRectMake(0, 688, 1024, 80)];
-        [footer setImage:[UIImage imageNamed:@"footer"]];
-        footer.userInteractionEnabled = YES;
-        [self.view addSubview:footer];
         footer.hidden = YES;
-        
-        prevBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        isStoryBook = YES;
+        NSString *filePath = [[NSBundle mainBundle]pathForResource:@"ExampleStory" ofType:@"txt"];
+        storyboard.delegate = self;
+        [storyboard loadScenesFromFilePath:filePath];
+        [storyboard startReading];
+        [footer setImage:[UIImage imageNamed:@"footer"]];
         [prevBtn setImage:[UIImage imageNamed:@"button_left"] forState:UIControlStateNormal];
-        prevBtn.frame = CGRectMake(800, 10, 56, 63);
-        [prevBtn addTarget:self action:@selector(prevScene:) forControlEvents:UIControlEventTouchUpInside];
-        [footer addSubview:prevBtn];
-        
-        nextBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [nextBtn setImage:[UIImage imageNamed:@"button_right"] forState:UIControlStateNormal];
-        nextBtn.frame = CGRectMake(900, 10, 56, 63);
-        [nextBtn addTarget:self action:@selector(nextScene:) forControlEvents:UIControlEventTouchUpInside];
-        [footer addSubview:nextBtn];
     }else{
-        //viewDidLoad is usually call in Portrait mode and need to wait until the rotation is completed
-        [self performSelector:@selector(loadObjects) withObject:nil afterDelay:0.01f];
-        
+        //order of exection is important since allRemoteImageLoaded() will call immediately if all images are loaded
+        UILabel *label = [[UILabel alloc]initWithFrame:self.view.bounds];
+        label.font = [UIFont boldSystemFontOfSize:30];
+        label.textColor = [UIColor colorWithRed:90.0f/255.0f green:157.0f/255.0f blue:125.0f/255.0f alpha:0.9];
+        label.text = @"Loading Images. Please wait...";
+        label.textAlignment = UITextAlignmentCenter;
+        label.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        label.tag = 121;
+        [self.view addSubview:label];
+
+        //Load remote images
+        NSString *filePathRemote = [[NSBundle mainBundle]pathForResource:@"StoryWithRemoteImage" ofType:@"txt"];
+        [storyboard loadScenesFromFilePath:filePathRemote];
+        storyboard.delegate = self;
+        [storyboard preloadRemoteImagesForScenes];
+        [footer setBackgroundColor:[UIColor lightGrayColor]];
+        [prevBtn setImage:[UIImage imageNamed:@"draft_button_left"] forState:UIControlStateNormal];
+        [nextBtn setImage:[UIImage imageNamed:@"draft_button_right"] forState:UIControlStateNormal];
+        isStoryBook = NO;
     }
+    
+//viewDidLoad is usually call in Portrait mode and need to wait until the rotation is completed
+//        [self performSelector:@selector(loadObjects) withObject:nil afterDelay:0.01f];
+    [self.view addSubview:footer];
 
 }
 
@@ -130,7 +152,9 @@
 }
 
 - (void)changedToScene:(NSInteger)sceneIndex{
-    footer.hidden = sceneIndex <= 1;
+    if (isStoryBook) {
+        footer.hidden = (sceneIndex <= 1);
+    }
 }
 
 - (void)draggedObject:(id<P2MSAbstractObject>)object at:(CGPoint)curPosition withGestureRecognizer:(UIGestureRecognizer *)gesture forSceneIndex:(NSInteger)sceneIndex{
@@ -148,5 +172,16 @@
         }
     }
 }
+
+- (void)allRemoteImageLoaded:(P2MSStoryboard *)storyboardObj{
+    [[self.view viewWithTag:121]removeFromSuperview];
+    [storyboardObj startReading];
+}
+
+- (void)remoteImageLoadFailed:(NSString *)imageURL{
+    //do something for unloaded images
+}
+
+
 
 @end

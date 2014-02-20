@@ -9,6 +9,7 @@
 #import "P2MSAnimationObject.h"
 #import "P2MSObjectWrapper.h"
 #import "P2MSDefaultObjectSubClass.h"
+#import "AdditionalFunctions.h"
 
 
 @interface P2MSAnimationObject(){
@@ -23,7 +24,7 @@
 @implementation P2MSAnimationObject
 @synthesize objectID;
 @synthesize objectType;
-@synthesize objectTag, isCancelled;
+@synthesize objectTag, isCancelled = _isCancelled;
 @synthesize view;
 
 - (id)init{
@@ -86,7 +87,7 @@
     if (imageNames.count > 1) {
         NSMutableArray *imgArray = [NSMutableArray arrayWithCapacity:imageNames.count];
         for (NSString *imgName in imageNames) {
-            [imgArray addObject:[UIImage imageNamed:imgName]];
+            [imgArray addObject:[AdditionalFunctions imageFromPath:imgName]];
         }
         ((UIImageView *)view).animationImages = imgArray;
         CGFloat animationDuration = 1;
@@ -105,7 +106,7 @@
         ((UIImageView *)view).image = [imgArray lastObject];
         [((UIImageView *)view) startAnimating];
     }else{
-        [((UIImageView *)view) setImage:[UIImage imageNamed:[imageNames objectAtIndex:0]]];
+        [((UIImageView *)view) setImage:[AdditionalFunctions imageFromPath:[imageNames objectAtIndex:0]]];
     }
     view.tag = tagNumber;
     [parentView addSubview:view];
@@ -148,6 +149,7 @@
 }
 
 - (void)removeObject:(BOOL)keepAppearance{
+    _isCancelled = YES;
     [super removeObject:keepAppearance];
     [invisibleButton removeFromSuperview];
     [gestureRecognizer removeTarget:self action:@selector(imagePanned:)];

@@ -34,7 +34,7 @@ typedef enum {
 
 + (id)animationString:(NSString *)animString repeatCount:(CGFloat)repeatCount serialIndex:(NSInteger)serialIndex;
 + (id)animationWithChildAnimations:(NSArray *)childAnimation repeatCount:(CGFloat)repeatCount serialStartIndex:(NSInteger)serialStartIndex;
-+ (id)animationFromString:(NSString *)animString;
++ (id)animationFromString:(NSString *)stringRep;
 
 
 @end

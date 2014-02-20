@@ -111,7 +111,7 @@
 }
 
 - (void)performAnimationForVerb:(NSString *)animVerb andAnimParams:(NSArray *)animParams{
-    id<P2MSObjectBehavior> objectBehavior = [P2MSObjectAnimationFactory getBehaviorFromVerb:animVerb andParams:animParams];
+    id<P2MSObjectBehavior> objectBehavior = [P2MSObjectAnimationFactory getBehaviorFromVerb:animVerb andParams:animParams forObjectType:self.objectType];
     objectBehavior.delegate = self;
     [objectBehavior performBehaviorOnObject:self];
     [_objectBehaviors addObject:objectBehavior];
@@ -121,7 +121,8 @@
     NSArray *consecutiveAnims = [animSequence componentsSeparatedByString:@"--"];
     _curAnimateCount = consecutiveAnims.count;
     for (NSString *animSequence in consecutiveAnims) {
-        NSArray *animParts = [animSequence componentsSeparatedByString:@":"];
+        NSRange firstColon = [animSequence rangeOfString:@":"];
+        NSArray *animParts = [NSArray arrayWithObjects:[animSequence substringWithRange:NSMakeRange(0, firstColon.location)], [animSequence substringWithRange:NSMakeRange(firstColon.location+1, animSequence.length-firstColon.location-1)], nil];
         NSArray *animParams = [[animParts objectAtIndex:1]componentsSeparatedByString:@","];
         CGFloat delay = [[animParams objectAtIndex:0]floatValue];
         if (delay) {
@@ -164,7 +165,7 @@
 }
 
 - (void)dealloc{
-    [self removeObject:YES];
+    [self removeObject:YES];//to ensure all the related objects and timers are removed
     NSLog(@"Animation object dealloc %@ %d", self.objectID, _animationState);
 }
 
